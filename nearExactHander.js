@@ -68,6 +68,7 @@ function relatedQuerySplitter() {
 
   AG_CHECK_LABEL = getWeekLabel();
   provideLabel(AG_CHECK_LABEL);
+  
   Logger.log("Analyzing NearExact Queries from " + DATE_RANGE);
 
   var adGroupIterator = AdWordsApp.adGroups()
