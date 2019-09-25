@@ -68,7 +68,6 @@ function relatedQuerySplitter() {
 
   AG_CHECK_LABEL = getWeekLabel();
   provideLabel(AG_CHECK_LABEL);
-
   Logger.log("Analyzing NearExact Queries from " + DATE_RANGE);
 
   var adGroupIterator = AdWordsApp.adGroups()
@@ -423,7 +422,7 @@ function getTypoCorrection(query) {
 
   // Retrieve the CSE id from your project console: https://cse.google.com/cse/all
   var cx = "014836489453389152633:ccrrjjwbm3f";
-  
+
   // Create an API after here after selecting your project: https://developers.google.com/custom-search/v1/introduction
   var api_key = 'AIzaSyDAhGbL17bkG2WtCvTXMMpzkMR0ZyS3xew';
   var api_endPoint_free = 'https://www.googleapis.com/customsearch/v1';
