@@ -190,7 +190,7 @@ function relatedQuerySplitter() {
       */
 
       if(ADD_CLOSE_VARIANTS_TO_SAME_ADGROUP === 1 && queryObj.kwDistance.simValue > CLOSE_VARIANT_METRICS_TO_SAME_ADGROUP.minSimilarity_ToKeyword &&
-         (queryObj.clicks / keywordClicks) > CLOSE_VARIANT_METRICS_TO_SAME_ADGROUP.minShareOfKeywordClicks && queryObj.queryType !== "typo" && skagCreated === false && queryObj.queryType !== "unknown" &&
+         (queryObj.clicks / keywordClicks) > CLOSE_VARIANT_METRICS_TO_SAME_ADGROUP.minShareOfKeywordClicks && queryObj.queryType == "variant_wordorder" && skagCreated === false &&
          queryExistsAsKeyword === false) {
 
         Logger.log("\nadding keyword to same adgroup: " + adGroupName);
