@@ -133,8 +133,7 @@ function relatedQuerySplitter() {
         queryObj.kwDistance.simValue < CLOSE_VARIANT_METRICS_TO_SAME_ADGROUP.minSimilarity_ToKeyword && queryObj.kwDistance.letterDist > 2 &&
         queryObj.cpc > (keywordAvgCpc * CLOSE_VARIANT_METRICS_TO_SAME_ADGROUP.minRelativeCpc_ToKeyword) &&
         (queryObj.clicks / keywordClicks) > CLOSE_VARIANT_METRICS_TO_SAME_ADGROUP.minShareOfKeywordClicks &&
-        queryObj.queryType !== "variant_spacing" && queryObj.queryType !== "variant_wordorder" && queryObj.queryType !== "variant_letter" && queryObj.queryType !== "typo" &&
-        queryObj.queryType !== "unknown" &&
+        queryObj.queryType == "variant_word" &&
         queryExistsAsKeyword === false) {
 
         try{
