@@ -12,10 +12,6 @@
 * Paste the ocid parameter from the current URL above */
 var ACCOUNT_OCID = 34836217; 
 
-/* This demo key will work across all accounts */
-var API_KEY = "N6Xm1bf4Xk3ZC4fNKuml1xukQFYpnfS2"; 
-var LICENSED_VERSION = "unstable"; // Don't change for now
-
 
 ///////////////////////////////////////
 // 1. Campaign Scope 
@@ -93,7 +89,7 @@ function main(){
   
   try{
     var test = SpreadsheetApp.openByUrl(LOG_SHEET_URL);
-    var scriptfile_name = "https://scripts.adserver.cc/getScript.php?package=nrKeywords&version="+LICENSED_VERSION+"&script=interAdgroupNegativeFencer.js&aid=123-345-7890&key="+API_KEY;
+    var scriptfile_name = "https://raw.githubusercontent.com/ChrisGutknecht/KeywordsScripts/master/interAdgroupNegativeFencer.js";
     var scriptFile_raw = UrlFetchApp.fetch(scriptfile_name).getContentText();
 
     try{
